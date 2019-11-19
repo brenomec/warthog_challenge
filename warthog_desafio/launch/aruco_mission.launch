@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find warthog_gazebo)/launch/warthog_world.launch">
+    </include>
+    
+    <include file="$(find warthog_viz)/launch/view_robot.launch">
+    </include>
+
+    <include file="$(find warthog_navigation)/launch/exploration_demo.launch">
+    </include>
+
+</launch>

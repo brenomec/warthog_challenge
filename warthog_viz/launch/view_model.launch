@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Standalone launcher to visualize the robot model. -->
+  <include file="$(find warthog_description)/launch/description.launch">
+    <arg name="laser_enabled" value="$(arg laser_enabled)"/>
+    <arg name="kinect_enabled" value="$(arg kinect_enabled)"/>
+  </include>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="true" />
+  </node>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find warthog_viz)/rviz/model.rviz" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+</launch>
