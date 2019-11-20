@@ -42,8 +42,8 @@ class Warthog():
         goal = PoseStamped()
         goal.header.frame_id = "odom"
         goal.pose.orientation.w = 0.7
-        goal.pose.position.x = 5
-        goal.pose.position.y = -4
+        goal.pose.position.x = 6
+        goal.pose.position.y = -5
         rospy.sleep(1)
         self.velocity_publisher.publish(goal)
 
@@ -131,16 +131,16 @@ class every():
         lista = self.id.getIds()
         self.warthog.move2goal_init()
         if not self.encontrado:
-            if 4 in lista:
-                print ("Tag recognized")
-                self.encontrado = True
-                self.warthog.move2goal_tag_0()
-                self.encontrado = False
-                if not self.encontrado:
-                    if 0 in lista:
-                        print ("Tag recognized")
-                        self.encontrado = True
-                        self.warthog.move2goal_zero()
+           if 4 in lista:
+               print ("Tag recognized")
+               self.encontrado = True
+               self.warthog.move2goal_tag_0()
+               self.encontrado = False
+               if not self.encontrado:
+                   if 0 in lista:
+                       print ("Tag recognized")
+                       self.encontrado = True
+                       self.warthog.move2goal_zero()
                         # self.encontrado = False
 
 if __name__ == "__main__":

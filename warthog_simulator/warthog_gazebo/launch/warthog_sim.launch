@@ -15,5 +15,5 @@
 
   <!-- Spawn Warthog -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
-	      args="-urdf -model warthog -param robot_description -x -7 -y 0 -z 1.0 -R 0.0 -P 0.0 -Y -0" />
+	      args="-urdf -model warthog -param robot_description -x -2 -y 0 -z 1.0 -R 0.0 -P 0.0 -Y -0" />
 </launch>
